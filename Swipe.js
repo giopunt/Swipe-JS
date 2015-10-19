@@ -1,3 +1,15 @@
+/*
+* Swipe.js 1.0.0 2015 Giovanni Puntil - MIT license
+* 
+* Eg. of use:
+*
+* var Swipe = new Swipe(document, {
+*    onSwipeLeft: function(){ console.log('onswipeleft') },
+*    onSwipeRight: function(){ console.log('onswiperight') }
+* });                                        
+*/
+'use strict';
+
 var Swipe = function(target, options){
     this.start = {
         x: null,
@@ -59,4 +71,4 @@ Swipe.prototype.handleTouchMove = function(event) {
     /* reset values */
     this.start.x = null;
     this.start.y = null;                                             
-};                                       
+};
