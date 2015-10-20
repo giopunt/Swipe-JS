@@ -17,10 +17,10 @@ var Swipe = function(target, options){
     };
     this.target = target;
     this.options = {
-        onSwipeLeft: options.onswipeleft || function(){}, 
-        onSwipeRight: options.onswiperight || function(){}, 
-        onSwipeDown: options.onswipedown || function(){}, 
-        onSwipeUp: options.onswipeup || function(){}, 
+        onSwipeLeft: options.onSwipeLeft || function(){}, 
+        onSwipeRight: options.onSwipeRight || function(){}, 
+        onSwipeDown: options.onSwipeDown || function(){}, 
+        onSwipeUp: options.onSwipeUp || function(){}, 
     }
 
     this.bindHandler(target);

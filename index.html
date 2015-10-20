@@ -1,0 +1,44 @@
+<!--
+Test page
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Swipe Test page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        html, body, * {-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+        #swipe-area {
+            background:yellow;
+            width:250px;
+            height:250px;
+            margin: 0 auto;
+        }
+        #swipe-area h1 {
+            color:black;
+            font-weight:bold;
+            font-family:sans-serif;
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="swipe-area">
+        <h1>...swipe</h1>
+    </div>
+    <script src="/Swipe.js"></script>
+    <script>
+        var displayArea = document.querySelector('#swipe-area h1');
+        var swipy = new Swipe(
+            document.getElementById("swipe-area"), 
+            {
+                onSwipeLeft: function(){ displayArea.innerHTML = 'LEFT'; },
+                onSwipeRight: function(){ displayArea.innerHTML = 'RIGHT'; },
+                onSwipeUp: function(){ displayArea.innerHTML = 'UP'; },
+                onSwipeDown: function(){ displayArea.innerHTML = 'DOWN'; }
+            }
+        );
+        document.ontouchmove = function(event){event.preventDefault();}
+    </script>
+</body>
+</html>
